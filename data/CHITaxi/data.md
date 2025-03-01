@@ -1,0 +1,1 @@
+The spatio-temporal graph adjacency matrix after the random walk can be downloaded from the link: https://drive.google.com/drive/folders/1wjTRio8USE5HM252-gy6aqNp5YqvsBvk?usp=drive_link, and placed in the current directory
