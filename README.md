@@ -1,13 +1,14 @@
 ## **CSSG: Continuous Spatio-temporal Graph Learning Framework**
-[](https://img.shields.io/badge/PyTorch-1.8%2B-orange)
+[](https://img.shields.io/badge/PyTorch-1.10%2B-orange)
 Official implementation for "CSSG: A Continuous Spatio-temporal Graph Learning Framework with Scalable Spatial Granularity".
+![framewwork](./image/framework.png)
 
 ## **Abstract**
 Spatio-temporal data is extensively collected in ubiquitous cyber-physical systems, where modeling complex spatio-temporal dependencies using Spatio-temporal Graph (STG) is crucial for downstream decision-making tasks. However, these tasks often necessitate that STG methods adapt to the coupling between varying spatial granularity and continuous temporal evolution, leading to certain limitations in the scalability and dynamic continuous-time modeling capabilities of existing methods. To this end, we propose a Continuous spatio-temporal graph learning framework with Scalable Spatial Granularity (CSSG). This framework establishes the coupling between scalable spatial granularity and continuous temporal evolution through anchor set-based spatial modeling and local conservation-based temporal modeling. Specifically, CSSG first derives the initial node spatio-temporal embeddings using a spatio-temporal encoding module that takes scalable spatial embeddings based on anchor sets as input. Then, a bidirectional differential edge aggregation module dynamically updates the continuous interaction weights of edges based on local conservation. Finally, a spatio-temporal adaptive fusion module integrates continuous change patterns of bidirectional edges into a unified node representation, generating initial node states for the decoder to infer future states. Extensive experiments on various real-world datasets verify the scalability and effectiveness of CSSG in continuous spatio-temporal prediction for varying spatial granularities, while also demonstrating greater efficiency compared to state-of-the-art solutions with comparable performance.
 ## Installation
 Main package requirements:
 ```bash
-conda create -n cssg python=3.8
+conda create -n cssg python=3.9
 conda activate cssg
 pip install -r requirements.txt
 ```
@@ -48,9 +49,9 @@ main.py                    # Main file
 README.md                  # Project documentation file
 ```
 ## Quick Start
-To train the H^2DGL, run the following command in the directory `./`:
+To train the CSSG, run the following command in the directory `./`:
 ```
-bash run.sh  --dataset=<DATASET> --device=<GPU_ID>
+bash run.sh --dataset=<DATASET> --device=<GPU_ID>
 ```
 Explanation for the arguments:
 - `DATASET`:name for using dataset.  `CHITaxi` , `WSHTaxi`, and so on are available.
