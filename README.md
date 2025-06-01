@@ -14,8 +14,27 @@ pip install -r requirements.txt
 ```
 ## Data Preparation
 For the CHITaxi dataset, you can download the raw data for the spatio-temporal graph adjacency matrix after the random walk from [Google Drive](https://drive.google.com/drive/folders/1wjTRio8USE5HM252-gy6aqNp5YqvsBvk?usp=drive_link). After downloading, please place the data files in the `data/CHITaxi` folder.
+
+## Running Scripts
+To train the CSSG, run the following command in the directory `./`:
+```
+bash run.sh --dataset=<DATASET> --device=<GPU_ID>
+```
+Explanation for the arguments:
+- `DATASET`:name for using dataset.  `CHITaxi` , `WSHTaxi`, and so on are available.
+- `GPU_ID`: Specifies the GPU identifier to be used for training.
+
+## Training Log Files
+The training logs will be stored in the `runs/CHITaxi/` directory. These logs include:
+- Hyperparameters used for training.
+- Training loss and validation loss for each epoch.
+- Performance metrics recorded during the training process.
+
 ## Code Structure
 ```
+conf/                      # Configure file
+└── CHITaxi_CSSG.conf
+│
 controldiffeq/             # NCDE tool files
 ├── __init__.py            # Package initialization file
 ├── cdeint_module.py       # NCDE related module
@@ -35,7 +54,7 @@ lib/                       # Training and metrics calculation files
 ├── logger.py              # Logging functionality
 ├── metrics.py             # Metrics computation functions
 ├── normalization.py       # Data normalization functions
-├── Trainer.py             # Training related functionalities
+├── Trainer.py             # Training-related functionalities
 └── TrainInits.py          # Training initialization settings
 │
 model/                     # Model construction files
@@ -48,11 +67,3 @@ runs/                      # Run log files
 main.py                    # Main file
 README.md                  # Project documentation file
 ```
-## Quick Start
-To train the CSSG, run the following command in the directory `./`:
-```
-bash run.sh --dataset=<DATASET> --device=<GPU_ID>
-```
-Explanation for the arguments:
-- `DATASET`:name for using dataset.  `CHITaxi` , `WSHTaxi`, and so on are available.
-- `GPU_ID`: Specifies the GPU identifier to be used for training.
