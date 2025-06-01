@@ -12,9 +12,7 @@ conda activate cssg
 pip install -r requirements.txt
 ```
 ## Data Preparation
-```bash
-For CHITaxi dataset, you can download the raw data for the spatio-temporal graph adjacency matrix after the random walk from [Google Drive](https://drive.google.com/drive/folders/1wjTRio8USE5HM252-gy6aqNp5YqvsBvk?usp=drive_link). After downloading, please place the data files in the `data/CHITaxi` folder.
-```
+For the CHITaxi dataset, you can download the raw data for the spatio-temporal graph adjacency matrix after the random walk from [Google Drive](https://drive.google.com/drive/folders/1wjTRio8USE5HM252-gy6aqNp5YqvsBvk?usp=drive_link). After downloading, please place the data files in the `data/CHITaxi` folder.
 ## Code Structure
 ```
 controldiffeq/             # NCDE tool files
